@@ -1,0 +1,13 @@
+{
+  "name": "shatha-theme",
+  "version": "1.0.0",
+  "description": "Modern Elegant Salla theme for perfumes and incense.",
+  "author": "Shatha",
+  "settings": {
+    "colors": {
+      "primary": "#d4af37",
+      "secondary": "#3e2723",
+      "background": "#f8f4f0"
+    }
+  }
+}
