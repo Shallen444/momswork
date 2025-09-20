@@ -1,0 +1,10 @@
+shatha-theme/
+├── assets/
+│   ├── logo.png
+│   ├── product1.jpg
+│   ├── product2.jpg
+│   └── product3.jpg
+├── css/
+│   └── style.css
+└── templates/
+    └── index.html
