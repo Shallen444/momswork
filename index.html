@@ -2,61 +2,91 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>شذى للبخور والعطور</title>
-  <link href="../css/style.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>شذا للبخور والعطور</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- خط عربي -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ملف CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+    }
+  </style>
 </head>
-<body>
+<body class="text-gray-800">
+
   <!-- الهيدر -->
-  <header class="header">
-    <img src="../assets/logo.png" alt="شذى للبخور والعطور" class="logo" />
-    <nav class="nav">
-      <a href="#">الرئيسية</a>
-      <a href="#">المتجر</a>
-      <a href="#">عنّا</a>
-      <a href="#">تواصل</a>
+  <header class="flex items-center justify-between p-4 shadow">
+    <!-- الشعار -->
+    <img src="assets/logo.png" alt="شذا للبخور والعطور" class="h-12">
+    <!-- القائمة -->
+    <nav class="space-x-4 space-x-reverse">
+      <a href="#products" class="text-gray-700 hover:text-amber-700">المنتجات</a>
+      <a href="#about" class="text-gray-700 hover:text-amber-700">عنّا</a>
+      <a href="#contact" class="text-gray-700 hover:text-amber-700">تواصل</a>
     </nav>
   </header>
 
-  <!-- البانر -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>عبق فاخر يلامس روحك</h1>
-      <a href="#" class="btn">تسوق الآن</a>
+  <!-- بانر بخلفية متدرجة -->
+  <section class="relative bg-gradient-to-r from-amber-200 via-amber-100 to-amber-50 h-[400px] flex flex-col items-center justify-center text-center">
+    <h1 class="text-4xl font-bold text-amber-900">شذا للبخور والعطور</h1>
+    <p class="mt-4 text-lg text-amber-800">عِبْق فاخر يلامس روحك</p>
+    <a href="#products" class="mt-6 bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-lg">تسوق الآن</a>
+  </section>
+
+  <!-- قسم المنتجات -->
+  <section id="products" class="py-16 px-6">
+    <h2 class="text-3xl font-bold text-center text-amber-800 mb-10">منتجاتنا المميزة</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- منتج 1 -->
+      <div class="product-card p-4 text-center">
+        <img src="assets/product1.jpg" alt="عطر 1" class="w-full h-60 object-cover rounded-lg">
+        <h3 class="mt-4 font-semibold">اسم المنتج</h3>
+        <p class="text-gray-600 mt-2">وصف قصير للمنتج</p>
+        <span class="block mt-2 font-bold text-amber-700">120 ر.س</span>
+        <a href="#" class="btn-primary mt-4">اشترِ الآن</a>
+      </div>
+
+      <!-- منتج 2 -->
+      <div class="product-card p-4 text-center">
+        <img src="assets/product2.jpg" alt="عطر 2" class="w-full h-60 object-cover rounded-lg">
+        <h3 class="mt-4 font-semibold">اسم المنتج</h3>
+        <p class="text-gray-600 mt-2">وصف قصير للمنتج</p>
+        <span class="block mt-2 font-bold text-amber-700">150 ر.س</span>
+        <a href="#" class="btn-primary mt-4">اشترِ الآن</a>
+      </div>
+
+      <!-- منتج 3 -->
+      <div class="product-card p-4 text-center">
+        <img src="assets/product3.jpg" alt="عطر 3" class="w-full h-60 object-cover rounded-lg">
+        <h3 class="mt-4 font-semibold">اسم المنتج</h3>
+        <p class="text-gray-600 mt-2">وصف قصير للمنتج</p>
+        <span class="block mt-2 font-bold text-amber-700">200 ر.س</span>
+        <a href="#" class="btn-primary mt-4">اشترِ الآن</a>
+      </div>
     </div>
   </section>
 
-  <!-- المنتجات -->
-  <section class="products">
-    <h2>منتجاتنا المميزة</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="../assets/product-1.jpg" alt="عطر 1" />
-        <h3>اسم المنتج</h3>
-        <p>120 ر.س</p>
-        <a href="#" class="btn">اشتري الآن</a>
-      </div>
-      <div class="product">
-        <img src="../assets/product-1.jpg" alt="عطر 2" />
-        <h3>اسم المنتج</h3>
-        <p>150 ر.س</p>
-        <a href="#" class="btn">اشتري الآن</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- عنّا -->
-  <section class="about">
-    <h2>من نحن</h2>
-    <p>
-      شذى للبخور والعطور يقدم لك أفخر أنواع العطور الشرقية والبخور المختارة بعناية،
-      لتضيف لمسة من الفخامة لكل لحظة.
+  <!-- قسم عنّا -->
+  <section id="about" class="py-16 bg-amber-50 px-6 text-center">
+    <h2 class="text-3xl font-bold text-amber-800 mb-6">من نحن</h2>
+    <p class="max-w-2xl mx-auto text-gray-700 leading-relaxed">
+      شذا للبخور والعطور يقدم لك أفخر العطور الشرقية والبخور المختارة بعناية، لتضفي لمسة من الفخامة لكل لحظة.
     </p>
   </section>
 
   <!-- الفوتر -->
-  <footer class="footer">
-    <p>© 2025 شذى للبخور والعطور. جميع الحقوق محفوظة.</p>
+  <footer id="contact" class="bg-amber-800 text-white text-center py-6">
+    <p>© 2025 شذا للبخور والعطور. جميع الحقوق محفوظة.</p>
   </footer>
+
 </body>
 </html>
