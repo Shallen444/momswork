@@ -1,39 +1,101 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجري</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>شذا للبخور والعطور</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- خط عربي -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+    }
+    .btn-primary {
+      background-color: #b45309; /* amber-700 */
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.5rem;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-primary:hover {
+      background-color: #78350f; /* amber-800 */
+    }
+  </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="text-gray-800">
 
+  <!-- الهيدر -->
+  <header class="flex items-center justify-between p-4 shadow">
     <!-- الشعار -->
-    <header class="text-center my-8">
-        <img src="https://i.ibb.co/SD6PQHJm/logo.png" alt="شعار المتجر" class="mx-auto w-48">
-    </header>
+    <img src="https://i.ibb.co/SD6PQHJm/logo.png" alt="شذا للبخور والعطور" class="h-12">
+    <!-- القائمة -->
+    <nav class="space-x-4 space-x-reverse">
+      <a href="#products" class="text-gray-700 hover:text-amber-700">المنتجات</a>
+      <a href="#about" class="text-gray-700 hover:text-amber-700">عنّا</a>
+      <a href="#contact" class="text-gray-700 hover:text-amber-700">تواصل</a>
+    </nav>
+  </header>
 
-    <!-- المنتجات -->
-    <main class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
-        <div class="bg-white p-4 rounded-lg shadow-md text-center">
-            <img src="https://i.ibb.co/fYNRG3pH/product1.jpg" alt="منتج 1" class="mx-auto mb-4 rounded-lg">
-            <h2 class="text-lg font-semibold">منتج 1</h2>
-            <p class="text-gray-600">وصف قصير للمنتج.</p>
-        </div>
+  <!-- بانر بخلفية متدرجة -->
+  <section class="relative bg-gradient-to-r from-amber-200 via-amber-100 to-amber-50 h-[400px] flex flex-col items-center justify-center text-center">
+    <h1 class="text-4xl font-bold text-amber-900">شذا للبخور والعطور</h1>
+    <p class="mt-4 text-lg text-amber-800">عِبْق فاخر يلامس روحك</p>
+    <a href="#products" class="mt-6 btn-primary">تسوق الآن</a>
+  </section>
 
-        <div class="bg-white p-4 rounded-lg shadow-md text-center">
-            <img src="https://i.ibb.co/xqMKRnhn/product2.jpg" alt="منتج 2" class="mx-auto mb-4 rounded-lg">
-            <h2 class="text-lg font-semibold">منتج 2</h2>
-            <p class="text-gray-600">وصف قصير للمنتج.</p>
-        </div>
+  <!-- قسم المنتجات -->
+  <section id="products" class="py-16 px-6">
+    <h2 class="text-3xl font-bold text-center text-amber-800 mb-10">منتجاتنا المميزة</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- منتج 1 -->
+      <div class="product-card p-4 text-center bg-white rounded-lg shadow-md">
+        <img src="https://i.ibb.co/fYNRG3pH/product1.jpg" alt="عطر 1" class="w-full h-60 object-cover rounded-lg">
+        <h3 class="mt-4 font-semibold">عطر 1</h3>
+        <p class="text-gray-600 mt-2">وصف قصير للمنتج</p>
+        <span class="block mt-2 font-bold text-amber-700">120 ر.س</span>
+        <a href="#" class="btn-primary mt-4">اشترِ الآن</a>
+      </div>
 
-        <div class="bg-white p-4 rounded-lg shadow-md text-center">
-            <img src="https://i.ibb.co/nsqRF3xz/product3.jpg" alt="منتج 3" class="mx-auto mb-4 rounded-lg">
-            <h2 class="text-lg font-semibold">منتج 3</h2>
-            <p class="text-gray-600">وصف قصير للمنتج.</p>
-        </div>
-    </main>
+      <!-- منتج 2 -->
+      <div class="product-card p-4 text-center bg-white rounded-lg shadow-md">
+        <img src="https://i.ibb.co/xqMKRnhn/product2.jpg" alt="عطر 2" class="w-full h-60 object-cover rounded-lg">
+        <h3 class="mt-4 font-semibold">عطر 2</h3>
+        <p class="text-gray-600 mt-2">وصف قصير للمنتج</p>
+        <span class="block mt-2 font-bold text-amber-700">150 ر.س</span>
+        <a href="#" class="btn-primary mt-4">اشترِ الآن</a>
+      </div>
+
+      <!-- منتج 3 -->
+      <div class="product-card p-4 text-center bg-white rounded-lg shadow-md">
+        <img src="https://i.ibb.co/nsqRF3xz/product3.jpg" alt="عطر 3" class="w-full h-60 object-cover rounded-lg">
+        <h3 class="mt-4 font-semibold">عطر 3</h3>
+        <p class="text-gray-600 mt-2">وصف قصير للمنتج</p>
+        <span class="block mt-2 font-bold text-amber-700">200 ر.س</span>
+        <a href="#" class="btn-primary mt-4">اشترِ الآن</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم عنّا -->
+  <section id="about" class="py-16 bg-amber-50 px-6 text-center">
+    <h2 class="text-3xl font-bold text-amber-800 mb-6">من نحن</h2>
+    <p class="max-w-2xl mx-auto text-gray-700 leading-relaxed">
+      شذا للبخور والعطور يقدم لك أفخر العطور الشرقية والبخور المختارة بعناية، لتضفي لمسة من الفخامة لكل لحظة.
+    </p>
+  </section>
+
+  <!-- الفوتر -->
+  <footer id="contact" class="bg-amber-800 text-white text-center py-6">
+    <p>© 2025 شذا للبخور والعطور. جميع الحقوق محفوظة.</p>
+  </footer>
 
 </body>
 </html>
